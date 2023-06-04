@@ -1,3 +1,6 @@
+import time
+
+
 def infix_to_prefix(infix_expr):
     # Membalikkan string infix
     infix_expr = infix_expr[::-1]
@@ -42,7 +45,17 @@ def infix_to_prefix(infix_expr):
 
 
 # Contoh penggunaan program
-while True :
-    infix_expression = input("Masukkan ekspresi infix: ")
-    prefix_expression = infix_to_prefix(infix_expression)
-    print("Ekspresi prefix: ", prefix_expression)
+while True:
+    print("="*20, "Konversi Infix - Prefix", "="*20), time.sleep(0.8)
+    print("="*26, "Kelompok 4", "="*27), time.sleep(0.8)
+    try:
+        infix_expression = input("Masukkan ekspresi infix: ")
+        prefix_expression = infix_to_prefix(infix_expression)
+        print("Ekspresi prefix: ", prefix_expression)
+    except ValueError:
+        print("inputkan yang benar")
+    except KeyboardInterrupt:
+        exit = input("Anda yakin untuk keluar dari program? [y/n]")
+        if exit == "y":
+            print("Bye!")
+            break
