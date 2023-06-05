@@ -1,4 +1,5 @@
 import time
+import os
 
 
 def infix_to_prefix(infix_expr):
@@ -50,12 +51,14 @@ while True:
     print("="*26, "Kelompok 4", "="*27), time.sleep(0.8)
     try:
         infix_expression = input("Masukkan ekspresi infix: ")
+
         prefix_expression = infix_to_prefix(infix_expression)
         print("Ekspresi prefix: ", prefix_expression)
+
     except ValueError:
         print("inputkan yang benar")
     except KeyboardInterrupt:
-        exit = input("Anda yakin untuk keluar dari program? [y/n]")
-        if exit == "y":
+        exit = input("\nAnda yakin untuk keluar dari program? [y/n]")
+        if exit == "y" or "Y":
             print("Bye!")
             break
