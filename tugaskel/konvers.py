@@ -1,8 +1,11 @@
-import time
+# import time
 import os
 
 
 def infix_to_prefix(infix_expr):
+
+    # Mengubah spasi menjadi tidak ada spasi dengan method replace()
+    infix_expr = infix_expr.replace("", "")
     # Membalikkan string infix
     infix_expr = infix_expr[::-1]
 
@@ -56,15 +59,21 @@ while True:
 
     print("="*20, "Konversi Infix - Prefix", "="*20)
     print("="*26, "Kelompok 4", "="*27)
-    # clear_screen()
     try:
         infix_expression = input("Masukkan ekspresi infix: ")
+        # clear_screen()
 
         prefix_expression = infix_to_prefix(infix_expression)
-        print("Ekspresi prefix: ", prefix_expression)
+        print("Ekspresi prefix:", prefix_expression)
+
+        # time.sleep(20)  # Tunggu 2 detik sebelum membersihkan layar
+        # clear_screen()
 
     except ValueError:
         print("Input yang Anda masukkan salah.")
+        # time.sleep(2)  # Tunggu 2 detik sebelum membersihkan layar
+        clear_screen()
+
     except KeyboardInterrupt:
         exit = input("\nAnda yakin ingin keluar dari program? [y/n]")
         if exit.lower() == "y":
