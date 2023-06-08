@@ -50,4 +50,14 @@ for x in range(row - 1, 0, -1):
 
 a = 5
 for x in range(a):
-    print(x)
+    for y in range(a - x - 1):
+        print(" ", end="")
+    for y in range(a+1):
+        print("*", end=" ")
+    print()
+for x in range(a - 1, 0, -1):
+    for y in range(a - x):
+        print(" ", end="")
+    for y in range(x):
+        print("*", end=" ")
+    print()
