@@ -1,6 +1,9 @@
 import time
 import os
 
+# Tugas konversi infix ke prefix kelompok 5
+# By. Dewan
+
 
 def infix_to_prefix(infix_expr):
     # Membalikkan string infix
@@ -45,7 +48,7 @@ def infix_to_prefix(infix_expr):
     return prefix_expr
 
 
-# Contoh penggunaan program
+# program utama
 while True:
     print("="*20, "Konversi Infix - Prefix", "="*20), time.sleep(0.8)
     print("="*26, "Kelompok 4", "="*27), time.sleep(0.8)
@@ -53,7 +56,7 @@ while True:
         infix_expression = input("Masukkan ekspresi infix: ")
 
         prefix_expression = infix_to_prefix(infix_expression)
-        print("Ekspresi prefix: ", prefix_expression)
+        print("Bentuk Ekspresi prefix: ", prefix_expression)
 
     except ValueError:
         print("inputkan yang benar")

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>simon</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="box satu"></div>
+        <div class="box dua"></div>
+        <div class="box tiga"></div>
+        <div class="box empat"></div>
+      </div>
+      <button type="button" id="btn"></button>
+    </div>
+    <script>
+      const button = document.querySelector("#btn");
+      const container = document.querySelector(".container");
+      let deg = 0;
+      btn.onclick = () => {
+        deg += 90;
+        container.style.transform = "rotate(" + deg + "deg)";
+      };
+    </script>
+  </body>
+</html>
