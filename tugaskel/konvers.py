@@ -5,14 +5,14 @@ import os
 def infix_to_prefix(infix_expr):
 
     # Mengubah spasi menjadi tidak ada spasi dengan method replace()
-    infix_expr = infix_expr.replace("", "")
+    infix_expr = infix_expr.replace(" ", "")
     # Membalikkan string infix
     infix_expr = infix_expr[::-1]
 
-    # Membuat kamus untuk presedensi operator
+    # Membuat array untuk presedensi operator
     operators = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
-    # Membuat tumpukan dan daftar untuk menyimpan hasil konversi
+    # Membuat variabel stack yang digunakan sebagai sebuah list kosong dan daftar untuk menyimpan hasil konversi
     stack = []
     prefix_expr = []
 
