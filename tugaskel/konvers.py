@@ -9,7 +9,7 @@ def infix_to_prefix(infix_expr):
     # Membalikkan string infix
     infix_expr = infix_expr[::-1]
 
-    # Membuat array untuk presedensi operator
+    # Membuat array untuk memberikan nilai presedensi pd masing-masing operator (urutan prioritas dari operator)
     operators = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
     # Membuat variabel stack yang digunakan sebagai sebuah list kosong dan daftar untuk menyimpan hasil konversi
